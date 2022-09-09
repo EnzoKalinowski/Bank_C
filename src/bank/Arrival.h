@@ -6,7 +6,7 @@
 class Departure:public Event{
 
     public:
-        Departure();
+        Departure(double triggerTime);
         void process();
 };
 

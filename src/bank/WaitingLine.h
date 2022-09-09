@@ -2,6 +2,7 @@
 #define __WAITINGLINE_H__
 
 #include "Customer.h"
+#include "Bank.h"
 #include <queue>
 
 class WaitingLine{
@@ -9,10 +10,11 @@ class WaitingLine{
         int _maxLength;
         double _averageLength;
         double _averageWaitingTime;
-        std::queue<Customer> _customers;
+        std::queue<Customer> _customersQueue;
+        Bank* _bank;
     
     public:
-        WaitingLine();
+        WaitingLine(Bank& bank);
         int maxLength();
         double averagelength();
         double averageWaitingTime();

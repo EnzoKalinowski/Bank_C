@@ -2,11 +2,17 @@
 #define __DEPARTURE_H__
 
 #include "../simulation/Event.h"
+#include "./Cashier.h"
+#include "./Customer.h"
+
 
 class Departure:public Event{
+    protected:
+        Customer _customer;
+        Cashier _cashier;
 
     public:
-        Departure();
+        Departure(Customer customer, Cashier cashier, double triggerTime);
         void process();
 };
 

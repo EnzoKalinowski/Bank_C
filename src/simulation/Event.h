@@ -3,9 +3,10 @@
 
 class Event{
     protected:
-        double _time;
+        double _triggerTime;
+
     public:
-        Event();
+        Event(double triggerTime);
         double time();
         virtual void process();
 };
