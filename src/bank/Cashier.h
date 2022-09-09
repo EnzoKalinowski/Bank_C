@@ -4,7 +4,7 @@
 #include "Customer.h"
 
 class Cashier{
+    protected
 
 };
-
 #endif // __CASHIER_H__

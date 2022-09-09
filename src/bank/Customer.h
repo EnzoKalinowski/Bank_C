@@ -5,9 +5,8 @@ class Customer{
 
     protected:
         double _arrivalTime;
-        double _serviceTime;
     public:
-        Customer(double serviceTime);
+        Customer(double arrivalTime);
         double arrivalTime();
 
 };
