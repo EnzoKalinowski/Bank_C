@@ -8,7 +8,6 @@ class Customer{
     public:
         Customer(double arrivalTime);
         double arrivalTime();
-
 };
 
 #endif // __CUSTOMER_H__

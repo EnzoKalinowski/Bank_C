@@ -8,11 +8,11 @@
 
 class Departure:public Event{
     protected:
-        Customer _customer;
-        Cashier _cashier;
+        Customer& _customer;
+        Cashier& _cashier;
 
     public:
-        Departure(Customer customer, Cashier cashier, double triggerTime);
+        Departure(Customer& customer, Cashier& cashier, double triggerTime);
         void process();
 };
 
