@@ -4,7 +4,24 @@
 #include "Customer.h"
 
 class Cashier{
-    protected
+    protected:
+        double _averageServiceTime;
+        int _nbCustomers;
+        double _occupancyTime;
+
+    private:
+        Cashier(int averageServiceTime);
+        double averageServiceTime();
+        int nbCustomers();
+        double occupacyRate();
+        bool isFree();
+        void serve(Customer& c);
+        void wait();
+
+
+
+
+        
 
 };
 #endif // __CASHIER_H__

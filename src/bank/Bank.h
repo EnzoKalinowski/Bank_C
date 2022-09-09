@@ -1,11 +1,11 @@
 #ifndef __BANK_H__
 #define __BANK_H__
 
-#include "../simulation/SED.h"
+#include "../simulation/DES.h"
 #include "WaitingLine.h"
 #include "Cashier.h"
 
-class Bank:public SED{
+class Bank:public DES{
 
     protected:
         double _plannedTime;

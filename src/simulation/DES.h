@@ -4,12 +4,12 @@
 #include "Event.h"
 #include <set>
 
-class SED{
+class DES{
     protected:
         std::set<Event> _eventSet;
 
     public:
-        SED();
+        DES();
         void run();
         double heure();
 
