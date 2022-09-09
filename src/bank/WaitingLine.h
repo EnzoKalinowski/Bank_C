@@ -8,8 +8,9 @@
 class WaitingLine{
     protected:
         int _maxLength;
-        double _averageLength;
-        double _averageWaitingTime;
+        int _sumLength;
+        int _denLength;
+        double _sumWaitingTime;
         std::queue<Customer> _customersQueue;
         Bank* _bank;
     

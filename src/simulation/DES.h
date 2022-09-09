@@ -6,6 +6,7 @@
 
 class DES{
     protected:
+        double _time;
         std::set<Event> _eventSet;
 
     public:

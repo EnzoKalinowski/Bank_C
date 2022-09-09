@@ -11,7 +11,6 @@ class Bank:public DES{
         double _plannedTime;
         int _nbCashier;
         double _averageArrivalTimeInterval;
-        double _realTime;
         int _nbCustomer;
         Cashier** _cashiers;
         WaitingLine* waitingLine; 
