@@ -9,7 +9,7 @@ class Cashier{
         int _nbCustomers;
         double _occupancyTime;
 
-    private:
+    public:
         Cashier(int averageServiceTime);
         double averageServiceTime();
         int nbCustomers();

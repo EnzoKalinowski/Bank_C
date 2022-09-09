@@ -10,16 +10,16 @@ class Bank:public DES{
     protected:
         double _plannedTime;
         int _nbCashier;
-        double _intervalArrivalTime;
+        double _averageArrivalTimeInterval;
         double _realTime;
         int _nbCustomer;
         Cashier** _cashiers;
         WaitingLine* waitingLine; 
     public:
-        Bank();
+        Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers, double averageArrivalTimeInterval);
         double plannedTime();
         int nbCashier();
-        double intervalArrivalTime();
+        double averageArrivalTimeInterval();
         double realTime();
         int nbCustomer();
         Cashier* firstFree();

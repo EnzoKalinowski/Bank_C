@@ -3,10 +3,10 @@
 
 #include "../simulation/Event.h"
 
-class Departure:public Event{
+class Arrival:public Event{
 
     public:
-        Departure(double triggerTime);
+        Arrival(double triggerTime);
         void process();
 };
 
