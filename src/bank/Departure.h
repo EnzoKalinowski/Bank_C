@@ -6,7 +6,7 @@
 #include "./Customer.h"
 
 
-class Departure:public Event{
+class Departure: public Event {
     protected:
         Customer& _customer;
         Cashier& _cashier;

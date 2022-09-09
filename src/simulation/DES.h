@@ -12,7 +12,7 @@ class DES{
     public:
         DES();
         void run();
-        double heure();
+        double time();
 
 };
 

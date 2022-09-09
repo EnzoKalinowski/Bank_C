@@ -1,4 +1,4 @@
-#include <Cashier.h>
+#include "Cashier.h"
 #include <iostream>
 
 using namespace std;
@@ -26,12 +26,18 @@ bool Cashier::isFree()
 void Cashier::serve(Customer& c)
 {
     cout << "A cashier is serving one of the customer";
+    _free = false;
     _nbCustomers = _nbCustomers + 1;
     _occupancyTime = _occupancyTime + (_bank->realTime() - c.arrivalTime());
 }
 
 void Cashier::wait()
 {
-    cout << "A cashier is waiting";
+    cout << "Cashier is waiting for customers...";
     _free = true;
+}
+
+Bank* Cashier::getBank()
+{
+    return _bank;
 }

@@ -7,8 +7,8 @@ class Event{
 
     public:
         Event(double triggerTime);
-        double time();
         virtual void process();
+        double triggerTime();
 };
 
 #endif // __EVENT_H__

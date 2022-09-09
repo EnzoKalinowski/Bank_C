@@ -1,4 +1,7 @@
-#include <Departure.h>
+#include "Departure.h"
+#include <iostream>
+
+using namespace std;
 
 Departure::Departure(Customer& customer, Cashier& cashier, double triggerTime){
     _customer = customer;
@@ -7,8 +10,6 @@ Departure::Departure(Customer& customer, Cashier& cashier, double triggerTime){
 }
 
 void Departure::process(){
-    if(_cashier.isFree()){
-        _cashier.serve(_customer);
-    }
-    //TO-DO
+    _cashier.serve(_customer);
+    cout << "A customer has been served. Elapsed time : " << _cashier.getBank()->time() - _triggerTime << "ms";
 }

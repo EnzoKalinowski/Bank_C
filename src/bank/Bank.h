@@ -22,7 +22,7 @@ class Bank:public DES{
         double realTime();
         int nbCustomer();
         Cashier* firstFree();
-
+        WaitingLine* getWaitingLine();
 };
 
 #endif // __BANK_H__

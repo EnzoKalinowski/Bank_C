@@ -1,4 +1,4 @@
-#include <Customer.h>
+#include "Customer.h"
 
 Customer::Customer(double arrivalTime){
     _arrivalTime = arrivalTime;

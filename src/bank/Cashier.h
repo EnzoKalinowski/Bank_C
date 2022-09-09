@@ -20,6 +20,7 @@ class Cashier{
         bool isFree();
         void serve(Customer& c);
         void wait();
+        Bank* getBank();
 
 
 
