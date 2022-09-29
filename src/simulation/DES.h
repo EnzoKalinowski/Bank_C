@@ -11,6 +11,7 @@ class DES{
 
     public:
         DES();
+        void add(Event& event);
         void run();
         double time();
 
