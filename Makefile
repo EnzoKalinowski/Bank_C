@@ -1,15 +1,28 @@
-CXX = g++
-CXXFLAGS = -Wall -Werror -Wextra -pedantic -std=c++17 -g -fsanitize=address
-LDFLAGS =  -fsanitize=address
+BIN_DIR ?= bin
+BUILD_DIR ?= build
+SRC_DIRS ?= src
 
-SRC = 
-OBJ = $(SRC:.cc=.o)
-EXEC = src/main.cpp
+SRCS := $(shell find $(SRC_DIRS) -name *.cpp -or -name *.c -or -name *.s)
+OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
+DEPS := $(OBJS:.o=.d)
 
-all: $(EXEC)
+INC_DIRS := $(shell find $(SRC_DIRS) -type d)
+INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
-$(EXEC): $(OBJ)
-	$(CXX) $(LDFLAGS) -o $@ $(OBJ) $(LBLIBS)
+CPPFLAGS ?= $(INC_FLAGS) -MMD -MP
+
+main: create_folders $(OBJS)
+	g++ $(OBJS) -o $(BIN_DIR)/main
+
+$(BUILD_DIR)/%.cpp.o: %.cpp
+	@mkdir -p $(dir $@)
+	g++ $(CPPFLAGS) -c $< -o $@
+
+create_folders:
+	@mkdir -p $(BIN_DIR)
+	@mkdir -p $(BUILD_DIR)
 
 clean:
-	rm -rf $(OBJ) $(EXEC)
+	$(RM) -r $(BUILD_DIR)
+
+-include $(DEPS)
