@@ -17,6 +17,7 @@ class WaitingLine{
     
     public:
         WaitingLine(Bank& bank);
+        ~WaitingLine();
         int maxLength();
         double averagelength();
         double averageWaitingTime();

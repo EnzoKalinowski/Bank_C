@@ -13,6 +13,12 @@ Bank::Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers
     }
 }
 
+Bank::~Bank()
+{
+    delete[] _cashiers;
+    waitingLine->~WaitingLine();
+}
+
 double Bank::plannedTime()
 {
     return _plannedTime;

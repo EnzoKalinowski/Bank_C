@@ -14,6 +14,7 @@ class Departure: public Event {
 
     public:
         Departure(Customer& customer, Cashier& cashier, double triggerTime);
+        ~Departure();
         void process();
 };
 

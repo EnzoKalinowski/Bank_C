@@ -11,6 +11,12 @@ WaitingLine::WaitingLine(Bank& bank)
 
 }
 
+WaitingLine::~WaitingLine()
+{
+    delete _bank;
+    
+}
+
 int WaitingLine::maxLength()
 {
     return _maxLength;

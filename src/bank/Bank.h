@@ -16,6 +16,7 @@ class Bank:public DES{
         WaitingLine* waitingLine; 
     public:
         Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers, double averageArrivalTimeInterval);
+        ~Bank();
         double plannedTime();
         int nbCashier();
         double averageArrivalTimeInterval();

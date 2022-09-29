@@ -8,6 +8,12 @@ Departure::Departure(Customer& customer, Cashier& cashier, double triggerTime ):
     _cashier = &cashier;
 }
 
+Departure::~Departure()
+{
+    delete _customer;
+    delete _cashier;
+}
+
 void Departure::process(){
     _cashier->serve(*_customer);
     cout << "A customer has been served. Elapsed time : " << _cashier->getBank()->time() - _triggerTime << "ms";

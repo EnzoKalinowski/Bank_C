@@ -14,6 +14,11 @@ Cashier::Cashier(int averageServiceTime,Bank& bank)
     _nbCustomers=0;
 }
 
+Cashier::~Cashier()
+{
+    delete _bank;
+}
+
 double Cashier::averageServiceTime()
 {
     return _averageServiceTime;

@@ -14,6 +14,7 @@ class Cashier{
 
     public:
         Cashier(int averageServiceTime, Bank& bank);
+        ~Cashier();
         double averageServiceTime();
         int nbCustomers();
         double occupacyRate();
