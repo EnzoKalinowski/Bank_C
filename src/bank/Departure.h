@@ -6,15 +6,33 @@
 #include "./Customer.h"
 #include "Bank.h"
 
-
+/**
+ * @brief Event corresponding to a customer's departure
+ * 
+ */
 class Departure: public Event {
     protected:
         Customer* _customer;
         Cashier* _cashier;
 
     public:
+        /**
+         * @brief Construct a new Departure object
+         * 
+         * @param customer customer who leave the bank
+         * @param cashier cashier who processed the customer
+         * @param triggerTime departure time
+         */
         Departure(Customer& customer, Cashier& cashier, double triggerTime);
+        /**
+         * @brief Destroy the Departure object
+         * 
+         */
         ~Departure();
+        /**
+         * @brief cashier serve the customer
+         * 
+         */
         void process();
 };
 

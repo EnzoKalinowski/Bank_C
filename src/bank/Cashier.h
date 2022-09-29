@@ -13,6 +13,12 @@ class Cashier{
         Bank* _bank;
 
     public:
+        /**
+         * @brief Construct a new Cashier object
+         * 
+         * @param averageServiceTime 
+         * @param bank 
+         */
         Cashier(int averageServiceTime, Bank& bank);
         ~Cashier();
         double averageServiceTime();
