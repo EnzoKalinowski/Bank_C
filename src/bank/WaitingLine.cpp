@@ -1,4 +1,5 @@
 #include "WaitingLine.h"
+#include "Bank.h"
 
 WaitingLine::WaitingLine(Bank& bank)
 {

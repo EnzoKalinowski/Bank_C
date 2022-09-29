@@ -1,7 +1,7 @@
 
 #include "Bank.h"
 
-Bank::Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers, double averageArrivalTimeInterval)
+Bank::Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers, double averageArrivalTimeInterval):DES()
 {
     _plannedTime=plannedTime;
     _nbCashier=nbCashier;
@@ -9,7 +9,7 @@ Bank::Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers
 
     for(int i=0;i<nbCashier;i++)
     {
-        _cashiers[i]= new Cashier(averageServiceTimeCashiers[i]);
+        _cashiers[i]= new Cashier(averageServiceTimeCashiers[i],*this);
     }
 }
 

@@ -2,8 +2,9 @@
 #define __WAITINGLINE_H__
 
 #include "Customer.h"
-#include "Bank.h"
 #include <queue>
+
+class Bank;
 
 class WaitingLine{
     protected:

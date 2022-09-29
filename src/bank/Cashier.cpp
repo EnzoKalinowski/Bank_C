@@ -1,7 +1,18 @@
 #include "Cashier.h"
+#include "Bank.h"
+
 #include <iostream>
 
 using namespace std;
+
+Cashier::Cashier(int averageServiceTime,Bank& bank)
+{
+    _averageServiceTime=averageServiceTime;
+    _bank=&bank;
+    _free=true;
+    _occupancyTime=0;
+    _nbCustomers=0;
+}
 
 double Cashier::averageServiceTime()
 {
@@ -41,3 +52,5 @@ Bank* Cashier::getBank()
 {
     return _bank;
 }
+
+

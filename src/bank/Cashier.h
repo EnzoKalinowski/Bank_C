@@ -2,7 +2,7 @@
 #define __CASHIER_H__
 
 #include "Customer.h"
-#include "Bank.h"
+class Bank;
 
 class Cashier{
     protected:
@@ -13,7 +13,7 @@ class Cashier{
         Bank* _bank;
 
     public:
-        Cashier(int averageServiceTime);
+        Cashier(int averageServiceTime, Bank& bank);
         double averageServiceTime();
         int nbCustomers();
         double occupacyRate();
