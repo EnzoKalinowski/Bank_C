@@ -32,11 +32,13 @@ void WaitingLine::add(Customer& c)
 }
 
 Customer& WaitingLine::remove()
-{
+{   
+    Customer& customer=_customersQueue.front();
     _customersQueue.pop();
+    return customer;
 }
 
 bool WaitingLine::isEmpty()
 {
-    _customersQueue.empty();
+    return _customersQueue.empty();
 }
