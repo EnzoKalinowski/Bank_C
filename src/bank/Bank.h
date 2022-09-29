@@ -15,14 +15,61 @@ class Bank:public DES{
         Cashier** _cashiers;
         WaitingLine* waitingLine; 
     public:
+        /**
+         * @brief Construct a new Bank object
+         * 
+         * @param plannedTime duration planned for the simulation
+         * @param nbCashier number of cashier in the bank
+         * @param averageServiceTimeCashiers average service time of cashiers
+         * @param averageArrivalTimeInterval average interval between two customers arrivals
+         */
         Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers, double averageArrivalTimeInterval);
+        /**
+         * @brief Destroy the Bank object
+         * 
+         */
         ~Bank();
+        /**
+         * @brief return plannedTime
+         * 
+         * @return double 
+         */
         double plannedTime();
+        /**
+         * @brief return number of cashiers
+         * 
+         * @return int 
+         */
         int nbCashier();
+        /**
+         * @brief return averageArrivalTimeInterval
+         * 
+         * @return double 
+         */
         double averageArrivalTimeInterval();
+        /**
+         * @brief real duration of the simulation
+         * 
+         * @return double 
+         */
         double realTime();
+        /**
+         * @brief number of customers during the simulation
+         * 
+         * @return int 
+         */
         int nbCustomer();
+        /**
+         * @brief return the first free cashier
+         * 
+         * @return Cashier* 
+         */
         Cashier* firstFree();
+        /**
+         * @brief Get the Waiting Line object
+         * 
+         * @return WaitingLine* 
+         */
         WaitingLine* getWaitingLine();
 };
 
