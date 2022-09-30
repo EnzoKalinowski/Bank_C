@@ -16,7 +16,6 @@ Bank::Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers
     _cashiers = new Cashier*[_nbCashier]();
     for(int i=0;i<nbCashier;i++)
     {
-        cout << averageServiceTimeCashiers[i] << endl;
         _cashiers[i]= new Cashier(averageServiceTimeCashiers[i],*this);
     }
     Arrival *firstArrival = new Arrival(0, *this);

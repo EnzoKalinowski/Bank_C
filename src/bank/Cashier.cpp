@@ -11,16 +11,15 @@ Cashier::Cashier(int averageServiceTime,Bank& bank):
 {
     _averageServiceTime=averageServiceTime;
     _bank=&bank;
-    cout << "2.2.1" << endl;
     _free=true;
     _occupancyTime=0;
     _nbCustomers=0;
-    cout << "2.2.2" << endl;
+  
 }
 
 Cashier::~Cashier()
 {
-    delete _bank;
+    // delete _bank;
 }
 
 double Cashier::averageServiceTime()
@@ -45,7 +44,7 @@ bool Cashier::isFree()
 
 void Cashier::serve(Customer* c)
 {
-    cout << "A cashier is serving one of the customer";
+    cout << "A cashier is serving one of the customer"<<endl;
     double servingTime = _serviceTimeGenerator.generate();
     double departureTime = _bank->time() + servingTime;
     _occupancyTime += servingTime;

@@ -12,11 +12,10 @@ Arrival::~Arrival(){
 }
 void Arrival::process()
 {
-     std::cout << "arrivalProcess1" << std::endl;
-     std::cout << "TRIGGER TIME " << _triggerTime << std::endl;
+
      Customer* customer = new Customer(_triggerTime);
      Cashier* cashier = _bank->firstFree();
-     std::cout << "arrivalProcess2" << std::endl;
+
      if(cashier != NULL)
      {
           cashier->serve(customer);
