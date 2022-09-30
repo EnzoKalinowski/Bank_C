@@ -22,11 +22,14 @@ create_folders:
 	@mkdir -p $(BIN_DIR)
 	@mkdir -p $(BUILD_DIR)
 
+.PHONY:doc
+doc:
+	@doxygen ./Doxyfile
+	
 clean:
 	$(RM) -r $(BUILD_DIR)
 
 -include $(DEPS)
 
-docs:
-	doxygen ./Doxyfile
+
 

@@ -1,0 +1,10 @@
+<map id="Departure" name="Departure">
+<area shape="rect" id="node1" title="Event corresponding to a customer&#39;s departure." alt="" coords="91,273,178,300"/>
+<area shape="rect" id="node2" href="$class_event.html" title="Event of a Discreet Event Simulation." alt="" coords="5,184,64,211"/>
+<area shape="rect" id="node3" href="$class_cashier.html" title=" " alt="" coords="129,95,199,121"/>
+<area shape="rect" id="node4" href="$class_bank.html" title=" " alt="" coords="306,184,361,211"/>
+<area shape="rect" id="node6" href="$class_waiting_line.html" title=" " alt="" coords="323,273,421,300"/>
+<area shape="rect" id="node5" href="$class_d_e_s.html" title=" " alt="" coords="509,95,557,121"/>
+<area shape="rect" id="node7" href="$class_poisson_generator.html" title=" " alt="" coords="175,5,313,32"/>
+<area shape="rect" id="node8" href="$class_customer.html" title=" " alt="" coords="195,184,280,211"/>
+</map>

@@ -1,0 +1,171 @@
+\hypertarget{class_waiting_line}{}\doxysection{Waiting\+Line Class Reference}
+\label{class_waiting_line}\index{WaitingLine@{WaitingLine}}
+
+
+Collaboration diagram for Waiting\+Line\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_waiting_line__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_waiting_line_aed51ffbc34d0861928ce1715317ea4ce}{Waiting\+Line}} (\mbox{\hyperlink{class_bank}{Bank}} \&bank)
+\begin{DoxyCompactList}\small\item\em Construct a new Waiting Line object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_waiting_line_a3c24ae0e9f55eb04abe9c24156983d06}{$\sim$\+Waiting\+Line}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Waiting Line object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_waiting_line_a3256294856d723c14656ca121b538cdb}{max\+Length}} ()
+\begin{DoxyCompactList}\small\item\em return max length of the waiting\+Line \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_waiting_line_ac219605ef958f3d45ec1d62bff9ecbd4}{averagelength}} ()
+\begin{DoxyCompactList}\small\item\em return averagelength of the waiting line \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_waiting_line_a48a3291aed3090648f5c36e0eb8ca62e}{average\+Waiting\+Time}} ()
+\begin{DoxyCompactList}\small\item\em average\+Waiting\+Time of customers \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waiting_line_aba16ad2b0dfa75e5e08a09eba6860a50}{add}} (\mbox{\hyperlink{class_customer}{Customer}} \&c)
+\begin{DoxyCompactList}\small\item\em add a customer to the waiting\+Line \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_customer}{Customer}} $\ast$ \mbox{\hyperlink{class_waiting_line_af23dbb43f3a7bb13b80b9fc44b5f7e97}{remove}} ()
+\begin{DoxyCompactList}\small\item\em remove a customer from the waiting\+Line \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_waiting_line_a922ca469506b83312b6f3b29be7a4ccb}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em return true if waiting\+Line is empty \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_waiting_line_a6a6210a9fca5c5c1ab90af1bd1c25d23}\label{class_waiting_line_a6a6210a9fca5c5c1ab90af1bd1c25d23}} 
+int {\bfseries \+\_\+max\+Length}
+\item 
+\mbox{\Hypertarget{class_waiting_line_aec6ad358d8c02f0a6e6a5789fefbf4ca}\label{class_waiting_line_aec6ad358d8c02f0a6e6a5789fefbf4ca}} 
+int {\bfseries \+\_\+sum\+Length}
+\item 
+\mbox{\Hypertarget{class_waiting_line_acda4465ea4468c24fa86fcf864c6314d}\label{class_waiting_line_acda4465ea4468c24fa86fcf864c6314d}} 
+int {\bfseries \+\_\+den\+Length}
+\item 
+\mbox{\Hypertarget{class_waiting_line_ad9315b0a38fe9156708d0d649ccf2bec}\label{class_waiting_line_ad9315b0a38fe9156708d0d649ccf2bec}} 
+double {\bfseries \+\_\+sum\+Waiting\+Time}
+\item 
+\mbox{\Hypertarget{class_waiting_line_ab11b078d9f1fa69a2c591edd37e178ca}\label{class_waiting_line_ab11b078d9f1fa69a2c591edd37e178ca}} 
+std\+::queue$<$ \mbox{\hyperlink{class_customer}{Customer}} $\ast$ $>$ {\bfseries \+\_\+customers\+Queue}
+\item 
+\mbox{\Hypertarget{class_waiting_line_a80cf8080352e58b2242200a461a05b93}\label{class_waiting_line_a80cf8080352e58b2242200a461a05b93}} 
+\mbox{\hyperlink{class_bank}{Bank}} $\ast$ {\bfseries \+\_\+bank}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_waiting_line_aed51ffbc34d0861928ce1715317ea4ce}\label{class_waiting_line_aed51ffbc34d0861928ce1715317ea4ce}} 
+\index{WaitingLine@{WaitingLine}!WaitingLine@{WaitingLine}}
+\index{WaitingLine@{WaitingLine}!WaitingLine@{WaitingLine}}
+\doxysubsubsection{\texorpdfstring{WaitingLine()}{WaitingLine()}}
+{\footnotesize\ttfamily Waiting\+Line\+::\+Waiting\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bank}{Bank}} \&}]{bank }\end{DoxyParamCaption})}
+
+
+
+Construct a new Waiting Line object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bank} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_waiting_line_a3c24ae0e9f55eb04abe9c24156983d06}\label{class_waiting_line_a3c24ae0e9f55eb04abe9c24156983d06}} 
+\index{WaitingLine@{WaitingLine}!````~WaitingLine@{$\sim$WaitingLine}}
+\index{````~WaitingLine@{$\sim$WaitingLine}!WaitingLine@{WaitingLine}}
+\doxysubsubsection{\texorpdfstring{$\sim$WaitingLine()}{~WaitingLine()}}
+{\footnotesize\ttfamily Waiting\+Line\+::$\sim$\+Waiting\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Waiting Line object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_waiting_line_aba16ad2b0dfa75e5e08a09eba6860a50}\label{class_waiting_line_aba16ad2b0dfa75e5e08a09eba6860a50}} 
+\index{WaitingLine@{WaitingLine}!add@{add}}
+\index{add@{add}!WaitingLine@{WaitingLine}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Waiting\+Line\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_customer}{Customer}} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+add a customer to the waiting\+Line 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_waiting_line_ac219605ef958f3d45ec1d62bff9ecbd4}\label{class_waiting_line_ac219605ef958f3d45ec1d62bff9ecbd4}} 
+\index{WaitingLine@{WaitingLine}!averagelength@{averagelength}}
+\index{averagelength@{averagelength}!WaitingLine@{WaitingLine}}
+\doxysubsubsection{\texorpdfstring{averagelength()}{averagelength()}}
+{\footnotesize\ttfamily double Waiting\+Line\+::averagelength (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return averagelength of the waiting line 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_waiting_line_a48a3291aed3090648f5c36e0eb8ca62e}\label{class_waiting_line_a48a3291aed3090648f5c36e0eb8ca62e}} 
+\index{WaitingLine@{WaitingLine}!averageWaitingTime@{averageWaitingTime}}
+\index{averageWaitingTime@{averageWaitingTime}!WaitingLine@{WaitingLine}}
+\doxysubsubsection{\texorpdfstring{averageWaitingTime()}{averageWaitingTime()}}
+{\footnotesize\ttfamily double Waiting\+Line\+::average\+Waiting\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+average\+Waiting\+Time of customers 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_waiting_line_a922ca469506b83312b6f3b29be7a4ccb}\label{class_waiting_line_a922ca469506b83312b6f3b29be7a4ccb}} 
+\index{WaitingLine@{WaitingLine}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!WaitingLine@{WaitingLine}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Waiting\+Line\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return true if waiting\+Line is empty 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_waiting_line_a3256294856d723c14656ca121b538cdb}\label{class_waiting_line_a3256294856d723c14656ca121b538cdb}} 
+\index{WaitingLine@{WaitingLine}!maxLength@{maxLength}}
+\index{maxLength@{maxLength}!WaitingLine@{WaitingLine}}
+\doxysubsubsection{\texorpdfstring{maxLength()}{maxLength()}}
+{\footnotesize\ttfamily int Waiting\+Line\+::max\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return max length of the waiting\+Line 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_waiting_line_af23dbb43f3a7bb13b80b9fc44b5f7e97}\label{class_waiting_line_af23dbb43f3a7bb13b80b9fc44b5f7e97}} 
+\index{WaitingLine@{WaitingLine}!remove@{remove}}
+\index{remove@{remove}!WaitingLine@{WaitingLine}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_customer}{Customer}} $\ast$ Waiting\+Line\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+remove a customer from the waiting\+Line 
+
+\begin{DoxyReturn}{Returns}
+Customer$\ast$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/bank/Waiting\+Line.\+h\item 
+src/bank/Waiting\+Line.\+cpp\end{DoxyCompactItemize}
