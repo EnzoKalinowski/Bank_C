@@ -1,4 +1,0 @@
-<map id="Departure" name="Departure">
-<area shape="rect" id="node1" title="Event corresponding to a customer&#39;s departure." alt="" coords="5,80,92,107"/>
-<area shape="rect" id="node2" href="$class_event.html" title="Event of a Discreet Event Simulation." alt="" coords="19,5,78,32"/>
-</map>
