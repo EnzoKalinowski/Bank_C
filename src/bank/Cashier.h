@@ -5,6 +5,10 @@
 #include "../simulation/PoissonGenerator.h"
 class Bank;
 
+/**
+ * @brief Cashier entity describing every caracteristics like average service, nb of customers, occupancy time.
+ * 
+ */
 class Cashier{
     protected:
         double _averageServiceTime;

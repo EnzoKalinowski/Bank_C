@@ -6,6 +6,11 @@
 
 class Bank;
 
+/**
+ * @brief This entity describes every element of a waiting line. 
+ * This waiting line is principally composed of a queue.
+ * 
+ */
 class WaitingLine{
     protected:
         int _maxLength;

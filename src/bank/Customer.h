@@ -1,6 +1,10 @@
 #ifndef __CUSTOMER_H__
 #define __CUSTOMER_H__
 
+/**
+ * @brief Customer entity described by his arrival time.
+ * 
+ */
 class Customer{
 
     protected:

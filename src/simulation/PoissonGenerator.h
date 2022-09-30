@@ -5,7 +5,10 @@
 #include <random>
 #include <ctime>
 
-
+/**
+ * @brief Describes the Poisson Distribution with lambda parameter and a random generator engine.
+ * 
+ */
 class PoissonGenerator 
 {
     private:

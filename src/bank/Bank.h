@@ -6,7 +6,10 @@
 #include "Cashier.h"
 #include "../simulation/PoissonGenerator.h"
 
-
+/**
+ * @brief Bank entity describing every element of a bank.
+ * 
+ */
 class Bank:public DES{
 
     protected:

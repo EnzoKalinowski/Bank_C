@@ -7,7 +7,10 @@
 #include <iostream>
 #include <random>
 
-
+/**
+ * @brief Arrival is one of the possible event, it describes all the arrival events.
+ * 
+ */
 class Arrival : public Event
 {
     protected:

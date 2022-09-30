@@ -5,11 +5,15 @@
 #include "setEventSorter.h"
 #include <set>
 
+/**
+ * @brief Describes the simulation through a set of events and the current time.
+ * 
+ */
 class DES
 {
 protected:
     double _time;
-    std::set<Event *, setEventSorter> _eventSet;
+    std::set<Event *, SetEventSorter> _eventSet;
 
 public:
     /**

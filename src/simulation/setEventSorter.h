@@ -2,7 +2,12 @@
 #define __SETEVENTSORTER_H__
 
 #include "Event.h"
-class setEventSorter 
+
+/**
+ * @brief SetEventSorter allows us to sort our waiting line set through event address.
+ * 
+ */
+class SetEventSorter 
 {
     public:
     /**

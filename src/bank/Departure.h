@@ -7,7 +7,7 @@
 #include "Bank.h"
 
 /**
- * @brief Event corresponding to a customer's departure
+ * @brief Arrival is one of the possible event, it describes all the arrival events.
  * 
  */
 class Departure: public Event {
