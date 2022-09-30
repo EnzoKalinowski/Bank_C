@@ -1,0 +1,128 @@
+\hypertarget{class_event}{}\doxysection{Event Class Reference}
+\label{class_event}\index{Event@{Event}}
+
+
+\mbox{\hyperlink{class_event}{Event}} of a Discreet \mbox{\hyperlink{class_event}{Event}} Simulation.  
+
+
+
+
+{\ttfamily \#include $<$Event.\+h$>$}
+
+
+
+Inheritance diagram for Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_event__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_a5a80b4bad11bb164f4465c9f23c3d9c0}{Event}} (double \mbox{\hyperlink{class_event_a96d1bb2edebe7f4e5ace15132c091a16}{trigger\+Time}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_event}{Event}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_event_a94833981462bef16e87a28de979f05fe}\label{class_event_a94833981462bef16e87a28de979f05fe}} 
+virtual void {\bfseries process} ()
+\item 
+double \mbox{\hyperlink{class_event_a96d1bb2edebe7f4e5ace15132c091a16}{trigger\+Time}} ()
+\begin{DoxyCompactList}\small\item\em return the trigger\+Time \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_event_a9e3919104a658fb2ab6b997e0ee960d3}{operator$<$}} (const \mbox{\hyperlink{class_event}{Event}} \&event) const
+\begin{DoxyCompactList}\small\item\em Operator $<$ useful to order the set of Events. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_event_aff9d8ff837f4aacea1a05244e6a7ae71}{operator$>$}} (const \mbox{\hyperlink{class_event}{Event}} \&event) const
+\begin{DoxyCompactList}\small\item\em Operator $>$ useful to order the set of Events. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_event_a32421852d531dfc492f534e953416174}{operator==}} (const \mbox{\hyperlink{class_event}{Event}} \&event) const
+\begin{DoxyCompactList}\small\item\em Operator $<$ useful to order the set of Events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_event_aed7c87c9e74ac55ef3e4103230f7a1cb}\label{class_event_aed7c87c9e74ac55ef3e4103230f7a1cb}} 
+double {\bfseries \+\_\+trigger\+Time}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_event}{Event}} of a Discreet \mbox{\hyperlink{class_event}{Event}} Simulation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_event_a5a80b4bad11bb164f4465c9f23c3d9c0}\label{class_event_a5a80b4bad11bb164f4465c9f23c3d9c0}} 
+\index{Event@{Event}!Event@{Event}}
+\index{Event@{Event}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}}
+{\footnotesize\ttfamily Event\+::\+Event (\begin{DoxyParamCaption}\item[{double}]{trigger\+Time }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_event}{Event}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger\+Time} & is the time when \mbox{\hyperlink{class_event}{Event}} should be processed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_event_a9e3919104a658fb2ab6b997e0ee960d3}\label{class_event_a9e3919104a658fb2ab6b997e0ee960d3}} 
+\index{Event@{Event}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Event\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{event }\end{DoxyParamCaption}) const}
+
+
+
+Operator $<$ useful to order the set of Events. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_event_a32421852d531dfc492f534e953416174}\label{class_event_a32421852d531dfc492f534e953416174}} 
+\index{Event@{Event}!operator==@{operator==}}
+\index{operator==@{operator==}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Event\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{event }\end{DoxyParamCaption}) const}
+
+
+
+Operator $<$ useful to order the set of Events. 
+
+\begin{DoxyReturn}{Returns}
+bool ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_event_aff9d8ff837f4aacea1a05244e6a7ae71}\label{class_event_aff9d8ff837f4aacea1a05244e6a7ae71}} 
+\index{Event@{Event}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Event\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{event }\end{DoxyParamCaption}) const}
+
+
+
+Operator $>$ useful to order the set of Events. 
+
+\begin{DoxyReturn}{Returns}
+bool ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_event_a96d1bb2edebe7f4e5ace15132c091a16}\label{class_event_a96d1bb2edebe7f4e5ace15132c091a16}} 
+\index{Event@{Event}!triggerTime@{triggerTime}}
+\index{triggerTime@{triggerTime}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{triggerTime()}{triggerTime()}}
+{\footnotesize\ttfamily double Event\+::trigger\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return the trigger\+Time 
+
+\begin{DoxyReturn}{Returns}
+double ~\newline
+ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/simulation/Event.\+h\item 
+src/simulation/Event.\+cpp\end{DoxyCompactItemize}

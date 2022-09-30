@@ -26,3 +26,7 @@ clean:
 	$(RM) -r $(BUILD_DIR)
 
 -include $(DEPS)
+
+docs:
+	doxygen ./Doxyfile
+
