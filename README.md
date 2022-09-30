@@ -1,28 +1,23 @@
 # Bank_C
-A C++ Bank simulation 
+Une simulation à évènement discret d'une banque en C++
 
+--------------------------COMMANDES-----------------------------
 
-STATUS
+Pour générer la documentation:
+    make doc
 
-Departure:
+Pour compiler le programme:
+    make main 
 
-Est-ce qu'on a oublier de retirer le client de la file après l'avoir servi?
+Exécuter le programme:
+    ./bin/main <plannedTime> <nbCashier> <averageArrivalIntervalTime> <averageServiceTime1> ... <averageServiceTimeNbCashier>
 
-DES :
+<plannedTime>: Durée prévue 
+<nbCashier>: Nombre de caissiers
+<averageArrivalIntervalTime>: Interval de temps moyen entre 2 arrivées de client
+<averageServiceTime>:temps de service moyen de chaque caissier (Attention à mettre autant de valeurs qu'il y a de caissiers)
 
-On doit faire la méthode pour sorting avec l'opérateur que j'ai choisi
--> Check les commentaires
+Pour obtenir de l'aide :
+    ./bin/main help 
 
-Event : 
-
-Les opérateurs sont fait, pas de soucis
-Manque plus qu'à faire le process, ça devrait pas être dur, je m'en occupe plus tard
-
-Arrival :
-
-Plusieurs questions pour le process(), je te laisse voir les commentaires
-
-Main : 
-
-Je n'ai pas encore touché au main, une fois tout terminer ça devrait être expédié, je m'en occupe ce soir
 
