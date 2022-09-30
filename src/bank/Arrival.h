@@ -15,7 +15,17 @@ class Arrival : public Event
         Bank* _bank;
 
     public:
+        /**
+         * @brief Construct a new Arrival object
+         * 
+         * @param triggerTime 
+         * @param bank 
+         */
         Arrival(double triggerTime, Bank& bank);
+        /**
+         * @brief create customer and add it to waitingLine or is served by cashier, generate next Arrival
+         * 
+         */
         void process();
 };
 

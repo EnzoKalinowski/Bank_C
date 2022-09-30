@@ -8,7 +8,6 @@ WaitingLine::WaitingLine(Bank& bank)
     _sumLength=0;
     _denLength=0;
     _sumWaitingTime=0;
-
 }
 
 WaitingLine::~WaitingLine()
@@ -35,12 +34,21 @@ double WaitingLine::averageWaitingTime()
 void WaitingLine::add(Customer& c)
 {
     _customersQueue.push(&c);
+    _sumLength+=_customersQueue.size();
+    _denLength+=1;
+    if(_customersQueue.size()>_maxLength)
+    {
+        _maxLength=_customersQueue.size();
+    }
 }
 
 Customer* WaitingLine::remove()
 {   
     Customer* customer=_customersQueue.front();
     _customersQueue.pop();
+    _sumWaitingTime+=(_bank->time()-customer->arrivalTime());
+    _sumLength+=_customersQueue.size();
+    _denLength+=1;
     return customer;
 }
 

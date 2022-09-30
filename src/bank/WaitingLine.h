@@ -16,13 +16,53 @@ class WaitingLine{
         Bank* _bank;
     
     public:
+        /**
+         * @brief Construct a new Waiting Line object
+         * 
+         * @param bank 
+         */
         WaitingLine(Bank& bank);
+        /**
+         * @brief Destroy the Waiting Line object
+         * 
+         */
         ~WaitingLine();
+        /**
+         * @brief return max length of the waitingLine
+         * 
+         * @return int 
+         */
         int maxLength();
+        /**
+         * @brief return averagelength of the waiting line
+         * 
+         * @return double 
+         */
         double averagelength();
+        /**
+         * @brief averageWaitingTime of customers
+         * 
+         * @return double 
+         */
         double averageWaitingTime();
+        /**
+         * @brief add a customer to the waitingLine
+         * 
+         * @param c 
+         */
         void add(Customer& c);
+        /**
+         * @brief remove a customer from the waitingLine
+         * 
+         * @return Customer* 
+         */
         Customer* remove();
+        /**
+         * @brief return true if waitingLine is empty
+         * 
+         * @return true 
+         * @return false 
+         */
         bool isEmpty();
 
 };
