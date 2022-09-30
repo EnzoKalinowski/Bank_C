@@ -1,7 +1,7 @@
-build/src/simulation/SetEventSorter.cpp.o: \
- src/simulation/SetEventSorter.cpp src/simulation/SetEventSorter.h \
+build/src/simulation/setEventSorter.cpp.o: \
+ src/simulation/setEventSorter.cpp src/simulation/setEventSorter.h \
  src/simulation/Event.h
 
-src/simulation/SetEventSorter.h:
+src/simulation/setEventSorter.h:
 
 src/simulation/Event.h:
