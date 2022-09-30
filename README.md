@@ -10,7 +10,7 @@ Pour compiler le programme:
     make main 
 
 Exécuter le programme:
-    ./bin/main <plannedTime> <nbCashier> <averageArrivalIntervalTime> <averageServiceTime1> ... <averageServiceTimeNbCashier>
+    ./bin/main -time <plannedTime> -nbCashier <nbCashier> -averageArrival <averageArrivalIntervalTime> -averageServiceTime<averageServiceTime1> ... <averageServiceTimeNbCashier>
 
 <plannedTime>: Durée prévue 
 <nbCashier>: Nombre de caissiers
