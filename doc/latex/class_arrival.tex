@@ -1,0 +1,81 @@
+\hypertarget{class_arrival}{}\doxysection{Arrival Class Reference}
+\label{class_arrival}\index{Arrival@{Arrival}}
+
+
+Inheritance diagram for Arrival\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=129pt]{class_arrival__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Arrival\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_arrival__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_arrival_a7c0189016c12588bf83b7accb4b51d07}{Arrival}} (double \mbox{\hyperlink{class_event_a96d1bb2edebe7f4e5ace15132c091a16}{trigger\+Time}}, \mbox{\hyperlink{class_bank}{Bank}} \&bank)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_arrival}{Arrival}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_arrival_ab4dc02499c4df6caf987f5317a1f9456}{process}} ()
+\begin{DoxyCompactList}\small\item\em create customer and add it to waiting\+Line or is served by cashier, generate next \mbox{\hyperlink{class_arrival}{Arrival}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_arrival_a0a06c25c2353d1f9d80f1fa2d19fc42f}\label{class_arrival_a0a06c25c2353d1f9d80f1fa2d19fc42f}} 
+double {\bfseries \+\_\+trigger\+Time}
+\item 
+\mbox{\Hypertarget{class_arrival_a5ea12fb843dd87530c1afe80910ac1fb}\label{class_arrival_a5ea12fb843dd87530c1afe80910ac1fb}} 
+\mbox{\hyperlink{class_bank}{Bank}} $\ast$ {\bfseries \+\_\+bank}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_arrival_a7c0189016c12588bf83b7accb4b51d07}\label{class_arrival_a7c0189016c12588bf83b7accb4b51d07}} 
+\index{Arrival@{Arrival}!Arrival@{Arrival}}
+\index{Arrival@{Arrival}!Arrival@{Arrival}}
+\doxysubsubsection{\texorpdfstring{Arrival()}{Arrival()}}
+{\footnotesize\ttfamily Arrival\+::\+Arrival (\begin{DoxyParamCaption}\item[{double}]{trigger\+Time,  }\item[{\mbox{\hyperlink{class_bank}{Bank}} \&}]{bank }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_arrival}{Arrival}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger\+Time} & \\
+\hline
+{\em bank} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_arrival_ab4dc02499c4df6caf987f5317a1f9456}\label{class_arrival_ab4dc02499c4df6caf987f5317a1f9456}} 
+\index{Arrival@{Arrival}!process@{process}}
+\index{process@{process}!Arrival@{Arrival}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Arrival\+::process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+create customer and add it to waiting\+Line or is served by cashier, generate next \mbox{\hyperlink{class_arrival}{Arrival}} 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_event}{Event}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/bank/Arrival.\+h\item 
+src/bank/Arrival.\+cpp\end{DoxyCompactItemize}
