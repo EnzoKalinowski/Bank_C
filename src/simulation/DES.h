@@ -31,11 +31,6 @@ class DES{
          * @return double
          */
         double time();
-        /**
-         * @brief Sorts the set according to an operator
-         */
-        void sortSet();
-
 };
 
 #endif // __SED_H__

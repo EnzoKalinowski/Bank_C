@@ -17,7 +17,16 @@ void DES::add(Event& event)
 
 void DES::run()
 {
-    
+    Event* currentEvent;
+
+    while(!_eventSet.empty())
+    {   
+        currentEvent=*_eventSet.begin();
+        _eventSet.erase(currentEvent);
+        _time=currentEvent->triggerTime();
+        currentEvent->process();
+        delete currentEvent;
+    }
 }
 
 double DES::time()
