@@ -27,6 +27,24 @@ class Event{
         -----------
         operators < , > and == pour que le set trie bien les event en fonction de triggerTime
         */
+
+        /**
+         * @brief Operator < useful to order the set of Events
+         * @return bool
+         */
+        bool operator < (const Event& event) const;
+
+        /**
+         * @brief Operator > useful to order the set of Events
+         * @return bool  
+         */
+        bool operator > (const Event& event) const;
+
+        /**
+         * @brief Operator < useful to order the set of Events
+         * @return bool  
+         */
+        bool operator == (const Event& event) const;
 };
 
 #endif // __EVENT_H__

@@ -4,6 +4,8 @@
 #include "../simulation/DES.h"
 #include "WaitingLine.h"
 #include "Cashier.h"
+#include "../simulation/PoissonGenerator.h"
+
 
 class Bank:public DES{
 
@@ -13,7 +15,8 @@ class Bank:public DES{
         double _averageArrivalTimeInterval;
         int _nbCustomer;
         Cashier** _cashiers;
-        WaitingLine* waitingLine; 
+        WaitingLine* _waitingLine; 
+        PoissonGenerator _arrivalTimeGenerator;
     public:
         /**
          * @brief Construct a new Bank object
@@ -71,6 +74,12 @@ class Bank:public DES{
          * @return WaitingLine* 
          */
         WaitingLine* getWaitingLine();
+        /**
+         * @brief Get the Arrival Time Generator object
+         * 
+         * @return PoissonGenerator 
+         */
+        PoissonGenerator getArrivalTimeGenerator();
 };
 
 #endif // __BANK_H__

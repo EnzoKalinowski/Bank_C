@@ -3,10 +3,16 @@
 
 #include "../simulation/Event.h"
 
-class Arrival:public Event{
+class Bank;
+
+class Arrival : public Event
+{
+    protected:
+        double _triggerTime;
+        Bank* _bank;
 
     public:
-        Arrival(double triggerTime);
+        Arrival(double triggerTime, Bank* bank);
         void process();
 };
 

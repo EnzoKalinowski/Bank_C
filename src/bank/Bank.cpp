@@ -1,7 +1,9 @@
 
 #include "Bank.h"
 
-Bank::Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers, double averageArrivalTimeInterval):DES()
+Bank::Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers, double averageArrivalTimeInterval):
+    _arrivalTimeGenerator(averageArrivalTimeInterval),
+    DES()
 {
     _plannedTime=plannedTime;
     _nbCashier=nbCashier;
@@ -16,7 +18,7 @@ Bank::Bank(double plannedTime, int nbCashier, double* averageServiceTimeCashiers
 Bank::~Bank()
 {
     delete[] _cashiers;
-    waitingLine->~WaitingLine();
+    _waitingLine->~WaitingLine();
 }
 
 double Bank::plannedTime()
@@ -55,6 +57,15 @@ Cashier* Bank::firstFree()
     }
 
     return NULL;
+}
+WaitingLine* Bank::getWaitingLine()
+{
+    return _waitingLine;
+}
+
+PoissonGenerator Bank::getArrivalTimeGenerator()
+{
+    return _arrivalTimeGenerator;
 }
 
 
