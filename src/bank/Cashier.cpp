@@ -46,7 +46,7 @@ void Cashier::serve(Customer* c)
 {
     cout << "A cashier is serving one of the customer";
     double servingTime = _serviceTimeGenerator.generate();
-    double departureTime = _bank->realTime() + servingTime;
+    double departureTime = _bank->time() + servingTime;
     _occupancyTime += servingTime;
     Departure* departure= new Departure(*c,*this,departureTime,*_bank);
     _bank->add(*departure);

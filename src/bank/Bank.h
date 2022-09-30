@@ -51,12 +51,6 @@ class Bank:public DES{
          */
         double averageArrivalTimeInterval();
         /**
-         * @brief real duration of the simulation
-         * 
-         * @return double 
-         */
-        double realTime();
-        /**
          * @brief number of customers during the simulation
          * 
          * @return int 

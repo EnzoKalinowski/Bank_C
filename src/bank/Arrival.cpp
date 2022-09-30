@@ -19,7 +19,7 @@ void Arrival::process()
    else{
         _bank->getWaitingLine()->add(*customer);
    }
-  double triggerTime = _bank->getArrivalTimeGenerator().generate();
+  double triggerTime = _bank->time() + _bank->getArrivalTimeGenerator().generate();
 
   if(triggerTime<=_bank->plannedTime()){
 		Arrival arrival(triggerTime,*_bank);

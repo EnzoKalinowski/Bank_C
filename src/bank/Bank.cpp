@@ -36,10 +36,7 @@ double Bank::averageArrivalTimeInterval()
     return _averageArrivalTimeInterval;
 }
 
-double Bank::realTime()
-{
-    return _time;
-}
+
 
 int Bank::nbCustomer()
 {
