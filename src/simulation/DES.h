@@ -2,7 +2,7 @@
 #define __SED_H__
 
 #include "Event.h"
-#include "setEventSorter.h"
+#include "SetEventSorter.h"
 #include <set>
 
 /**

@@ -1,4 +1,4 @@
-#include "setEventSorter.h"
+#include "SetEventSorter.h"
 
 bool SetEventSorter::operator()(Event* e1, Event* e2)
 {

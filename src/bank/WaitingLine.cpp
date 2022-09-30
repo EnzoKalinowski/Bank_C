@@ -1,5 +1,6 @@
 #include "WaitingLine.h"
 #include "Bank.h"
+#include <iostream>
 
 WaitingLine::WaitingLine(Bank& bank)
 {
@@ -12,8 +13,7 @@ WaitingLine::WaitingLine(Bank& bank)
 
 WaitingLine::~WaitingLine()
 {
-    delete _bank;
-    
+    //delete _bank;
 }
 
 int WaitingLine::maxLength()
@@ -33,9 +33,13 @@ double WaitingLine::averageWaitingTime()
 
 void WaitingLine::add(Customer& c)
 {
+    std::cout << "add1 " << std::endl;
     _customersQueue.push(&c);
+    std::cout << "add2" << std::endl;
     _sumLength+=_customersQueue.size();
+    std::cout << "add3" << std::endl;
     _denLength+=1;
+    std::cout << "add4" << std::endl;
     if(_customersQueue.size()>_maxLength)
     {
         _maxLength=_customersQueue.size();
@@ -54,5 +58,6 @@ Customer* WaitingLine::remove()
 
 bool WaitingLine::isEmpty()
 {
+    std::cout << "isEmpty" << std::endl;
     return _customersQueue.empty();
 }

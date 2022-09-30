@@ -11,10 +11,11 @@ Cashier::Cashier(int averageServiceTime,Bank& bank):
 {
     _averageServiceTime=averageServiceTime;
     _bank=&bank;
+    cout << "2.2.1" << endl;
     _free=true;
     _occupancyTime=0;
     _nbCustomers=0;
-
+    cout << "2.2.2" << endl;
 }
 
 Cashier::~Cashier()

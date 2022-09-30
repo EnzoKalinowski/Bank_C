@@ -6,7 +6,7 @@ Event::Event(double triggerTime){
 
 void Event::process()
 {
-    
+
 }
 
 double Event::triggerTime(){

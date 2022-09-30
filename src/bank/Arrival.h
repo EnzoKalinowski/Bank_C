@@ -25,6 +25,13 @@ class Arrival : public Event
          * @param bank 
          */
         Arrival(double triggerTime, Bank& bank);
+
+        /**
+         * @brief Destructor of the arrival
+         * 
+         */
+        ~Arrival();
+        
         /**
          * @brief create customer and add it to waitingLine or is served by cashier, generate next Arrival
          * 
