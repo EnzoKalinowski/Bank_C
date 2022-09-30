@@ -57,7 +57,7 @@ void Cashier::serve(Customer* c)
 
 void Cashier::wait()
 {
-    cout << "Cashier is waiting for customers...";
+    cout << "Cashier is waiting for customers..."<<endl;
     _free = true;
 }
 
