@@ -12,7 +12,7 @@ DES::~DES()
 }
 void DES::add(Event& event)
 {
-    _eventSet.insert(event);
+    _eventSet.insert(&event);
 }
 
 void DES::run()

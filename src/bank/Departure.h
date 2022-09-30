@@ -14,6 +14,7 @@ class Departure: public Event {
     protected:
         Customer* _customer;
         Cashier* _cashier;
+        Bank* _bank;
 
     public:
         /**
@@ -23,7 +24,7 @@ class Departure: public Event {
          * @param cashier cashier who processed the customer
          * @param triggerTime departure time
          */
-        Departure(Customer& customer, Cashier& cashier, double triggerTime);
+        Departure(Customer& customer, Cashier& cashier, double triggerTime,Bank& bank);
         /**
          * @brief Destroy the Departure object
          * 

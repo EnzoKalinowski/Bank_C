@@ -34,12 +34,12 @@ double WaitingLine::averageWaitingTime()
 
 void WaitingLine::add(Customer& c)
 {
-    _customersQueue.push(c);
+    _customersQueue.push(&c);
 }
 
-Customer& WaitingLine::remove()
+Customer* WaitingLine::remove()
 {   
-    Customer& customer=_customersQueue.front();
+    Customer* customer=_customersQueue.front();
     _customersQueue.pop();
     return customer;
 }

@@ -12,7 +12,7 @@ class WaitingLine{
         int _sumLength;
         int _denLength;
         double _sumWaitingTime;
-        std::queue<Customer> _customersQueue;
+        std::queue<Customer*> _customersQueue;
         Bank* _bank;
     
     public:
@@ -22,7 +22,7 @@ class WaitingLine{
         double averagelength();
         double averageWaitingTime();
         void add(Customer& c);
-        Customer& remove();
+        Customer* remove();
         bool isEmpty();
 
 };

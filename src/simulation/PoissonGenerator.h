@@ -1,3 +1,7 @@
+#ifndef __POISSONGENERATOR_H__
+#define __POISSONGENERATOR_H__
+
+
 #include <random>
 #include <ctime>
 
@@ -16,3 +20,5 @@ class PoissonGenerator
         double generate();
         
 };
+
+#endif // __POISSONGENERATOR_H__

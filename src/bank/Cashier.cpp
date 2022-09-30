@@ -1,17 +1,20 @@
 #include "Cashier.h"
 #include "Bank.h"
-
+#include "Departure.h"
+#include "../simulation/PoissonGenerator.h"
 #include <iostream>
 
 using namespace std;
 
-Cashier::Cashier(int averageServiceTime,Bank& bank)
+Cashier::Cashier(int averageServiceTime,Bank& bank):
+    _serviceTimeGenerator(averageServiceTime)
 {
     _averageServiceTime=averageServiceTime;
     _bank=&bank;
     _free=true;
     _occupancyTime=0;
     _nbCustomers=0;
+
 }
 
 Cashier::~Cashier()
@@ -39,12 +42,16 @@ bool Cashier::isFree()
     return _free;
 }
 
-void Cashier::serve(Customer& c)
+void Cashier::serve(Customer* c)
 {
     cout << "A cashier is serving one of the customer";
+    double servingTime = _serviceTimeGenerator.generate();
+    double departureTime = _bank->realTime() + servingTime;
+    _occupancyTime += servingTime;
+    Departure* departure= new Departure(*c,*this,departureTime,*_bank);
+    _bank->add(*departure);
     _free = false;
     _nbCustomers = _nbCustomers + 1;
-    _occupancyTime = _occupancyTime + (_bank->realTime() - c.arrivalTime());
 }
 
 void Cashier::wait()

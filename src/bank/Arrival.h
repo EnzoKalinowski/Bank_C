@@ -2,8 +2,11 @@
 #define __ARRIVAL_H__
 
 #include "../simulation/Event.h"
+#include "Customer.h"
+#include "Bank.h"
+#include <iostream>
+#include <random>
 
-class Bank;
 
 class Arrival : public Event
 {
@@ -12,7 +15,7 @@ class Arrival : public Event
         Bank* _bank;
 
     public:
-        Arrival(double triggerTime, Bank* bank);
+        Arrival(double triggerTime, Bank& bank);
         void process();
 };
 

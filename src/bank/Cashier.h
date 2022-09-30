@@ -2,6 +2,7 @@
 #define __CASHIER_H__
 
 #include "Customer.h"
+#include "../simulation/PoissonGenerator.h"
 class Bank;
 
 class Cashier{
@@ -11,6 +12,7 @@ class Cashier{
         double _occupancyTime;
         bool _free;
         Bank* _bank;
+        PoissonGenerator _serviceTimeGenerator;
 
     public:
         /**
@@ -55,7 +57,7 @@ class Cashier{
          * 
          * @param c is a customer
          */
-        void serve(Customer& c);
+        void serve(Customer* c);
         /**
          * @brief wait a customer to serve
          * 
